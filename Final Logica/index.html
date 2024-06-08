@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logica Examen final</title>
+</head>
+<body>
+    <h1>Ejericicio Final</h1>
+    <div class="calculator"> 
+        <input type="text" id="display" readonly>
+        <br>
+        <input type="number" id="variable1" onclick="addToDisplay('2')">
+        <input type="number" id="variable2" onclick="addToDisplay('2')">
+        <input type="number" id="variable3" onclick="addToDisplay('2')">
+        <br>
+        <input type="button" value="/" onclick="addToDisplay('/')">
+        <br>
+        <input type="button" value="*" onclick="addToDisplay('*')">
+        <br>
+        <input type="button" value="-" onclick="addToDisplay('-')">
+        <br> 
+        <input type="button" value="=" onclick="calculate()">
+        <input type="button" value="+" onclick="addToDisplay('+')">
+        <br>
+        <input type="button" value="Calcular" onclick="clearDisplay()">
+       </div>
+    
+       <script>
+        function addToDisplay(value){
+            document.getElementById('display').value += value;
+        }
+        function calculate() {
+    varible1 = document.getElementById('variable1').value;
+    varible2 = document.getElementById('variable2').value;
+    varible3 = document.getElementById('variable3').value;
+    resultado = parseInt(varible1) / parseInt(varible2);
+    document.getElementById('resultado').value = resultado;
+}
+    
+        function calculate(){
+            var expresion = document.getElementById('display').value;
+
+            var result = eval(expresion);
+            document.getElementById('display').value = result;
+        }
+
+       </script>
+</body>
+</html>
